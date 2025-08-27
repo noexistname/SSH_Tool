@@ -32,7 +32,7 @@ echo "alias ll='ls --color=auto -l'" >> /etc/bash.bashrc
 echo "alias egrep='egrep --color=auto'" >> /etc/bash.bashrc
 echo "alias fgrep='fgrep --color=auto'" >> /etc/bash.bashrc
 echo "alias grep='grep --color=auto'" >> /etc/bash.bashrc
-echo -e "${GREEN}Bash Shell配置完成。请重新登录或执行 'source /etc/bash.bashrc' 以应用更改。${NC}"
+source /etc/bash.bashrc
 
 # 步骤4: 开启 TCP BBR 拥塞控制算法
 echo -e "${GREEN}--- 4. 开启 TCP BBR 拥塞控制算法 ---${NC}"
@@ -59,7 +59,7 @@ echo -e "${GREEN}--- 5. 配置 UFW 防火墙 ---${NC}"
 apt install ufw -y
 
 # 启用 UFW
-ufw enable
+ufw enable -y
 
 # 检查 UFW 状态
 ufw status verbose
